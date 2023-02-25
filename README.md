@@ -29,6 +29,22 @@ we will add four services in that file
 * and will listen on port `6379` which is going to be mapped to port `6379` on host.
 
 #### 3. Web1, Web2
-* both services will be built from a different `Docker file` as mentioned above.
+* both services will be built from a different `Dockerfile` as mentioned above.
 * both will depend on the `redis database`
 * both web1 and “web2” services listen on port `5000` and will be mapped to ports `81` and `82` on host.
+
+## Validation
+
+* run `docker compose up -d`
+
+all containers will start successfully 
+
+![image](https://user-images.githubusercontent.com/47721226/221368399-56702adb-1716-4771-bd20-c0b6d6005c5f.png)
+
+* display all running containers `docker ps`
+
+![image](https://user-images.githubusercontent.com/47721226/221368606-c4091d83-185d-4fbc-a83c-b84303281880.png)
+
+* visit the web application from the host `curl http://127.0.0.1`
+
+![image](https://user-images.githubusercontent.com/47721226/221368685-0dd067e0-284f-44ae-8732-69ba612916ae.png)
