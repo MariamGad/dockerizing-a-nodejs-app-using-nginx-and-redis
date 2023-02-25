@@ -5,6 +5,7 @@ services:
     build: ./nginx
     ports:
      - "80:80"
+    restart: always
     depends_on:
      - web1
      - web2
@@ -21,6 +22,7 @@ services:
     build: ./web01
     ports:
      - "81:5000"
+    restart: always
     depends_on: 
      - redis
 
@@ -28,6 +30,7 @@ services:
     build: ./web02
     ports:
      - "82:5000"
+    restart: always
     depends_on:
      - redis
 
