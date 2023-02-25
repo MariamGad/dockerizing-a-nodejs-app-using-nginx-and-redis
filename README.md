@@ -4,6 +4,10 @@ We want to containerize a three tier application that consists of
 * **NGINX:** exposed to the internet and works as a load balancer. 
 * **Web1** , **Web2:** both are Node.js application, expose a specific port (this port is used by NGINX to communicate with the app).
 * **RedisDB:** the application is going to count the number of the visits and store it in this database.
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/47721226/221373797-69c55a64-91f3-4a3e-ba3e-8dc577b8ca5d.png">
+</div>
+
 --- 
 ## Steps
 ### NGINX
