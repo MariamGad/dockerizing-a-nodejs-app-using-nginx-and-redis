@@ -16,3 +16,11 @@ these steps are done for both servers
 * create a nodejs file `server.js` to update the number of visits of the web application in redisDB.
 * create `package.json` file to add all the information about the app and the dependencies that be installed. 
 * Create Dockerfile from `node:alpine image`, copy all these files under `/usr/src/app`, install nodejs package manager `npm` and finally when the container launch run `server.js`.
+
+### docker-compose file
+we will add three services in that file 
+#### 1. NGINX
+* NGINX service will be build from the created `Dockerfile` that is mentioned above.
+* this service will depend on our both web servers.
+* and will listen on port 80 which is going to be mapped to port 80 on host.
+
