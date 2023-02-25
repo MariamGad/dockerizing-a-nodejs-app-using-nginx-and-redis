@@ -5,6 +5,8 @@ services:
     build: ./nginx
     ports:
      - "80:80"
+    depends_on:
+     - web1
 
   redis:
     image: redis:alpine
@@ -12,7 +14,7 @@ services:
     ports:
      - "6379:6379"
 
-  web01:
+  web1:
     build: ./web01
     ports:
      - "81:5000"
